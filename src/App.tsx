@@ -1,7 +1,12 @@
+import Categories from "./common/Categories";
+import Navigate from "./common/Navigate";
 
 function App() {
   return (
-   <>News App</>
+   <>
+   <Navigate/>
+   <Categories/>
+   </>
   );
 }
 
