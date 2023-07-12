@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
@@ -7,7 +8,7 @@ export const Wrapper = styled.div`
   height: 400px;
 
 `;
-export const Tag = styled.div`
+export const Tag = styled(Link)`
   background-color: #e8e8e8;
   color: #262626;
   max-width:150px;
@@ -15,4 +16,5 @@ export const Tag = styled.div`
   padding: 10px;
   margin: 10px;
   border-radius: 15px;
+  text-decoration: none;
 `;
