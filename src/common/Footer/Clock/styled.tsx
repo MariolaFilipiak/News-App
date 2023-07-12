@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.h2`
   margin: 0 auto;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1vw;
   padding: 15px;
   color: #ffffff;
   letter-spacing: 1.4px;
