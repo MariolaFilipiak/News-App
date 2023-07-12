@@ -1,10 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { GlobalStyle } from './common/GlobalStyle';
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
+import {BrowserRouter} from "react-router-dom";
 
 const queryClient = new QueryClient();
 
@@ -15,7 +14,9 @@ root.render(
   <QueryClientProvider client={queryClient}>
     <ReactQueryDevtools />
     <GlobalStyle/>
+    <BrowserRouter basename='News-App'>
     <App />
+    </BrowserRouter>
  </QueryClientProvider>
 
 );
