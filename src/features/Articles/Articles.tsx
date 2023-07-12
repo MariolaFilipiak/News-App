@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
 import {
   Button,
   Date,
@@ -8,20 +9,12 @@ import {
   Tile,
   Title,
 } from "./styled";
-import axios from "axios";
-import { useState } from "react";
-import Country from "./Country";
-
-const fetchData = async () => {
-  const response = await axios.get(
-    `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=b67dd6612fc44245aeb6075c1b58e98f`
-  );
-  return response.data;
-};
+import Country from "./Country/Country";
+import { getData } from "../../common/getData";
 
 const Articles = () => {
   const [limit, setLimit] = useState(10);
-  const { data, isLoading, isError } = useQuery(["articles"], fetchData);
+  const { data, isLoading, isError } = useQuery(["articles"], getData);
 
   const articles = data?.articles || [];
 
@@ -45,7 +38,14 @@ const Articles = () => {
           <Tile key={article.id}>
             <Title>{article.title}</Title>
             <Date>{article.publishedAt}</Date>
-            <Image src={article.urlToImage} alt={article.title} />
+            {article.urlToImage ? (
+              <Image src={article.urlToImage} alt={article.title} />
+            ) : (
+              <Image
+                src="https://t4.ftcdn.net/jpg/03/24/14/35/360_F_324143588_Jk9uwkSlhuSEyrGWkuQT7MM6mFbCayIj.jpg"
+                alt="noImage"
+              />
+            )}
             <Description>{article.description}</Description>
           </Tile>
         ))}
