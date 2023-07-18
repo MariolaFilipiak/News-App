@@ -1,5 +1,5 @@
+import { Weather } from "../Footer/Weather";
 import SearchBar from "./SearchBar";
-import Theme from "./Theme";
 import { NavBar, Title, Wrapper } from "./styled";
 
 const Navigate = () => {
@@ -8,7 +8,7 @@ const Navigate = () => {
       <Wrapper>
         <Title to={"/"}>News App</Title>
         <SearchBar />
-        <Theme />
+        <Weather/>
       </Wrapper>
     </NavBar>
   );
