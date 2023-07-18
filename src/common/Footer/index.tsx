@@ -1,12 +1,13 @@
-import { Clock } from "./Clock/Clock"
-import { Wrapper } from "./styled"
+import { Weather } from "./Weather";
+import { Clock } from "./Clock/Clock";
+import { Wrapper } from "./styled";
 
 const Footer = () => {
   return (
     <Wrapper>
-        <Clock/>
+      <Clock />
+      <Weather/>
     </Wrapper>
-  )
-}
-
-export default Footer
+  );
+};
+export default Footer;
