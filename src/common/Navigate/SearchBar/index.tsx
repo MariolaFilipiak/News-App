@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { Bar } from "../styled";
 import { useEffect, useState } from "react";
 import { useDebounce } from "./useDebounce";
-import { searchQueryParamName } from "./searchQueryParamName";
+import { searchQueryParamName } from "./searchParams";
 
 const SearchBar = () => {
   const navigate = useNavigate();

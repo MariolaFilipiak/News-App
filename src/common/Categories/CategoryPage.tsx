@@ -12,11 +12,11 @@ import {
   Box,
   MoreButton,
 } from "../../features/Articles/styled";
-import { getCategory } from "../getData";
+import { getCategory } from "../getArticlesData";
 import Error from "../StatusPage/Error/Error";
 import Loading from "../StatusPage/Loading/Loading";
 import NoResult from "../StatusPage/NoResult/NoResult";
-import { searchQueryParamName } from "../Navigate/SearchBar/searchQueryParamName";
+import { searchQueryParamName } from "../Navigate/SearchBar/searchParams";
 
 const CategoryPage = () => {
   const [searchParams] = useSearchParams();
