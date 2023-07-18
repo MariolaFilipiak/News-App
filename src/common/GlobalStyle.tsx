@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: "nyt-cheltenham", georgia, "times new roman", times, serif;
        width: 100%;
     margin: 0;
 }
