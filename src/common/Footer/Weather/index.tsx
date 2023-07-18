@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { getWeatherData } from "../../getData";
 import { Box, Icon, Text, Wrapper } from "./styled";
+import { getWeatherData } from "./getWeatherData";
 
 export const Weather = () => {
   const { data } = useQuery(["weatherData"], getWeatherData);
