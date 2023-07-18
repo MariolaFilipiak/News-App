@@ -1,4 +1,7 @@
-# Unfortunately, the API key only works on the local host
+# News App
+
+## Demo
+https://mariolafilipiak.github.io/News-App/
 
 
 ## Getting Started with Create React App
