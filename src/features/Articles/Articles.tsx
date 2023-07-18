@@ -12,19 +12,19 @@ import {
   Box,
   MoreButton,
 } from "./styled";
-import { getData } from "../../common/getData";
+import { getArticlesData } from "../../common/getArticlesData";
 import Tags from "../../common/Categories/Tags";
 import Error from "../../common/StatusPage/Error/Error";
 import Loading from "../../common/StatusPage/Loading/Loading";
 import NoResult from "../../common/StatusPage/NoResult/NoResult";
-import { searchQueryParamName } from "../../common/Navigate/SearchBar/searchQueryParamName";
+import { searchQueryParamName } from "../../common/Navigate/SearchBar/searchParams";
 
 const Articles = () => {
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get(searchQueryParamName);
 
   const { data, isLoading, isError } = useQuery(["articles", searchQuery], () =>
-    getData(searchQuery || "election")
+    getArticlesData(searchQuery || "election")
   );
 
   if (isLoading) {
