@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.footer`
-background-color: #303030;
-height: 150px;
-display: flex;
-align-items: center
+  background-color: ${({ theme }) => theme.color.mineShaft};
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
 `;
