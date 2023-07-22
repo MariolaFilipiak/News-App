@@ -7,11 +7,8 @@ export const Wrapper = styled.div`
 export const Text = styled.p`
   font-size: 30px;
   font-weight: bold;
-  color: ${({ theme }) => theme.color.porcelain};
-  @media (max-width: ${({ theme }) => theme.breakpoint.medium}) {
-    font-size: 22px;
-  }
-  @media (max-width: ${({ theme }) => theme.breakpoint.min}) {
+  color: ${({ theme }) => theme.light.color.porcelain};
+  @media (max-width: ${({ theme }) => theme.light.breakpoint.mobile}) {
     font-size: 18px;
   }
 `;
@@ -22,7 +19,7 @@ export const Box = styled.div`
 `;
 export const Icon = styled.img`
   width: 50px;
-  @media (max-width: ${({ theme }) => theme.breakpoint.min}) {
+  @media (max-width: ${({ theme }) => theme.light.breakpoint.mobile}) {
     width: 25px;
   }
 `;
