@@ -7,9 +7,7 @@ import { searchQueryParamName } from "./searchParams";
 const SearchBar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [searchQuery, setSearchQuery] = useState<string | null>(
-    new URLSearchParams(location.search).get(searchQueryParamName)
-  );
+  const [searchQuery, setSearchQuery] = useState("");
   const debounceDelay = 300;
   const debouncedSearchQuery = useDebounce(searchQuery, debounceDelay);
 
@@ -18,15 +16,18 @@ const SearchBar = () => {
   }, [location.pathname]);
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    if (debouncedSearchQuery && debouncedSearchQuery.trim() !== "") {
-      searchParams.set(searchQueryParamName, debouncedSearchQuery);
+    if (debouncedSearchQuery.trim() === "") {
+      if (location.search !== "") {
+        setSearchQuery("");
+        const newPath = location.pathname.replace(/\/\d+$/, "");
+        navigate(newPath);
+      }
     } else {
-      searchParams.delete(searchQueryParamName);
+      navigate(
+        `${location.pathname}?${searchQueryParamName}=${debouncedSearchQuery}`
+      );
     }
-
-    navigate(`${location.pathname}?${searchParams.toString()}`);
-  }, [debouncedSearchQuery, location.search, navigate]);
+  }, [debouncedSearchQuery, location.pathname, navigate, location.search]);
 
   const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
