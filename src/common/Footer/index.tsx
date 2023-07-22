@@ -1,4 +1,4 @@
-import { Weather } from "./Weather";
+import { Weather } from "../Weather";
 import { Clock } from "./Clock/Clock";
 import { Wrapper } from "./styled";
 
