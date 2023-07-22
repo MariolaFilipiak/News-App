@@ -1,4 +1,4 @@
-import { toCategory } from "../../features/route";
+import { toCategory } from "../route";
 import { Tag, WrapperTags } from "./styled";
 
 const Tags = () => {
