@@ -3,6 +3,7 @@
 ## Demo
 https://mariolafilipiak.github.io/News-App/
 
+![img](https://github.com/MariolaFilipiak/News-App/blob/main/public/README1.png?raw=true)
 
 ## Getting Started with Create React App
 
