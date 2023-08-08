@@ -1,7 +1,7 @@
 # News App
 
 ##
-This is an easy  news app. I use TanStack Query and TypeScript. I use New York Times API. You can find categories and a search bar.Additionally, I added a weather icon. You can changed the view and theme color.
+This is an easy  news app. I use TanStack Query and TypeScript. I use New York Times API. You can find categories and a search bar, and You can changed the view and theme color.Additionally, I added a weather icon. 
 ## Demo
 https://mariolafilipiak.github.io/News-App/
 
