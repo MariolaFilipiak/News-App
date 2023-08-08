@@ -5,7 +5,7 @@ This is an easy  news app. I use TanStack Query and TypeScript. I use New York T
 ## Demo
 https://mariolafilipiak.github.io/News-App/
 
-![img](https://github.com/MariolaFilipiak/News-App/blob/main/public/README1.png?raw=true)
+![gif](https://github.com/MariolaFilipiak/News-App/blob/main/public/gif2.gif?raw=true)
 
 ## Getting Started with Create React App
 
