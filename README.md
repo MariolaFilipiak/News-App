@@ -1,8 +1,11 @@
 # News App
 
+##
+This is an easy  news app. I use TanStack Query and TypeScript. I use New York Times API. You can find categories and a search bar.
 ## Demo
 https://mariolafilipiak.github.io/News-App/
 
+![img](https://github.com/MariolaFilipiak/News-App/blob/main/public/README1.png?raw=true)
 
 ## Getting Started with Create React App
 
