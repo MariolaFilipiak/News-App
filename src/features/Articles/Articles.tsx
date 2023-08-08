@@ -67,7 +67,7 @@ const Articles: React.FC<ArticlesProps> = ({ viewMode }) => {
       {viewMode === "grid" ? (
         <GridView>
           <Tags />
-          {data?.map((article: any) => (
+          {data?.map((article: any ) => (
             <Tile
               key={article._id}
               href={article.web_url}

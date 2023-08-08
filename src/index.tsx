@@ -43,7 +43,7 @@ const NewsApp = () => {
             viewMode={viewMode}
             toggleViewMode={toggleViewMode}
           />
-    
+
           <Routes>
             <Route
               path="/category/:category"
